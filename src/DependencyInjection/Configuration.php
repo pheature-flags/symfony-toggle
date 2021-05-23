@@ -23,8 +23,11 @@ final class Configuration implements ConfigurationInterface
             ->enumNode('driver')
                 ->values(['inmemory', 'dbal'])
             ->end()
-            ->scalarNode('prefix')
+            ->scalarNode('api_prefix')
                 ->defaultValue('')
+            ->end()
+            ->booleanNode('api_enabled')
+                ->defaultFalse()
             ->end()
         ->end();
 

@@ -10,7 +10,7 @@ use PHPUnit\Framework\TestCase;
 use Symfony\Component\Config\Definition\Exception\InvalidConfigurationException;
 use Symfony\Component\Config\Definition\Processor;
 
-class ConfigurationTest extends TestCase
+final class ConfigurationTest extends TestCase
 {
     /** @dataProvider validConfigurations */
     public function testItShouldReturnAConfiguration(array $actualConfig, array $expectedConfig): void
@@ -37,21 +37,23 @@ class ConfigurationTest extends TestCase
         yield 'user does not define any config' => [
             'user config' => [],
             'expected config' => [
-                'prefix' => '',
+                'api_prefix' => '',
+                'api_enabled' => false,
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [],
             ]
         ];
 
-        yield 'user defines only the prefix' => [
+        yield 'user defines only the api_prefix' => [
             'user config' => [
                 'pheature_flags' => [
-                    'prefix' => 'myapp',
+                    'api_prefix' => 'myapp',
                 ],
             ],
             'expected config' => [
-                'prefix' => 'myapp',
+                'api_prefix' => 'myapp',
+                'api_enabled' => false,
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [],
@@ -65,7 +67,8 @@ class ConfigurationTest extends TestCase
                 ],
             ],
             'expected config' => [
-                'prefix' => '',
+                'api_prefix' => '',
+                'api_enabled' => false,
                 'driver' => 'dbal',
                 'strategy_types' => [],
                 'segment_types' => [],
@@ -85,7 +88,8 @@ class ConfigurationTest extends TestCase
                 ],
             ],
             'expected config' => [
-                'prefix' => '',
+                'api_prefix' => '',
+                'api_enabled' => false,
                 'strategy_types' => [
                     [
                         'type' => 'my_strategy_type',
@@ -109,7 +113,8 @@ class ConfigurationTest extends TestCase
                 ],
             ],
             'expected config' => [
-                'prefix' => '',
+                'api_prefix' => '',
+                'api_enabled' => false,
                 'strategy_types' => [],
                 'segment_types' => [
                     [
@@ -148,7 +153,8 @@ class ConfigurationTest extends TestCase
                 ],
             ],
             'expected config' => [
-                'prefix' => '',
+                'api_prefix' => '',
+                'api_enabled' => false,
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [
