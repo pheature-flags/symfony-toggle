@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/pheature-flags/pheature-flags/tree/HEAD)
+## [v0.1.2](https://github.com/pheature-flags/pheature-flags/tree/v0.1.2)
 
-[Full Changelog](https://github.com/pheature-flags/pheature-flags/compare/v0.1.1...HEAD)
+[Full Changelog](https://github.com/pheature-flags/pheature-flags/compare/v0.1.1...v0.1.2)
 
 **Fixed bugs:**
 
