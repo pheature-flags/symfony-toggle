@@ -8,7 +8,7 @@
 [![Maintainability][ico-mantain]][link-mantain]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-Pheature flags toggle core library, take a look to our [main package](https://github.com/pheature-flags/pheature-flags) to see our roadmap and project status.
+Pheature Flags Symfony Toggle management Bundle, take a look to our [main package](https://github.com/pheature-flags/pheature-flags) to see our roadmap and project status.
 
 ## Installation
 
