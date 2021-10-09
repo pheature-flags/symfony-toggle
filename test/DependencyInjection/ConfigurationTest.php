@@ -39,6 +39,7 @@ final class ConfigurationTest extends TestCase
             'expected config' => [
                 'api_prefix' => '',
                 'api_enabled' => false,
+                'driver_options' => [],
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [],
@@ -54,6 +55,7 @@ final class ConfigurationTest extends TestCase
             'expected config' => [
                 'api_prefix' => 'myapp',
                 'api_enabled' => false,
+                'driver_options' => [],
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [],
@@ -70,6 +72,25 @@ final class ConfigurationTest extends TestCase
                 'api_prefix' => '',
                 'api_enabled' => false,
                 'driver' => 'dbal',
+                'driver_options' => [],
+                'strategy_types' => [],
+                'segment_types' => [],
+                'toggles' => [],
+            ]
+        ];
+
+        yield 'user defines a chain driver' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'driver' => 'chain',
+                    'driver_options' => ['inmemory', 'dbal'],
+                ],
+            ],
+            'expected config' => [
+                'api_prefix' => '',
+                'api_enabled' => false,
+                'driver' => 'chain',
+                'driver_options' => ['inmemory', 'dbal'],
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [],
@@ -90,6 +111,7 @@ final class ConfigurationTest extends TestCase
             'expected config' => [
                 'api_prefix' => '',
                 'api_enabled' => false,
+                'driver_options' => [],
                 'strategy_types' => [
                     [
                         'type' => 'my_strategy_type',
@@ -115,6 +137,7 @@ final class ConfigurationTest extends TestCase
             'expected config' => [
                 'api_prefix' => '',
                 'api_enabled' => false,
+                'driver_options' => [],
                 'strategy_types' => [],
                 'segment_types' => [
                     [
@@ -155,6 +178,7 @@ final class ConfigurationTest extends TestCase
             'expected config' => [
                 'api_prefix' => '',
                 'api_enabled' => false,
+                'driver_options' => [],
                 'strategy_types' => [],
                 'segment_types' => [],
                 'toggles' => [

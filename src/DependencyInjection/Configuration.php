@@ -21,7 +21,10 @@ final class Configuration implements ConfigurationInterface
         /** @phpstan-ignore-next-line */
         $rootNode->children()
             ->enumNode('driver')
-                ->values(['inmemory', 'dbal'])
+                ->values(['inmemory', 'dbal', 'chain'])
+            ->end()
+            ->arrayNode('driver_options')
+                ->scalarPrototype()->end()
             ->end()
             ->scalarNode('api_prefix')
                 ->defaultValue('')
