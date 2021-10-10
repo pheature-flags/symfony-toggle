@@ -39,10 +39,11 @@ final class PheatureFlagsExtension extends ConfigurableExtension
 
         if ('dbal' === $driver) {
             $finder->addArgument(new Reference(Connection::class));
+        } else {
+            $finder->addArgument(null);
         }
 
         if ('inmemory' === $driver) {
-            $finder->addArgument(null);
             $container->register(InMemoryFeatureFactory::class, InMemoryFeatureFactory::class)
                 ->setAutowired(false)
                 ->setLazy(true)
