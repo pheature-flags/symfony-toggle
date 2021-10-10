@@ -1,6 +1,6 @@
 pheature_flags:
-  driver: dbal
-  driver_options: []
+  driver: chain
+  driver_options: [inmemory, dbal]
   segment_types:
     - { type: 'identity_segment', factory_id: 'Pheature\Model\Toggle\SegmentFactory' }
     - { type: 'strict_matching_segment', factory_id: 'Pheature\Model\Toggle\SegmentFactory' }

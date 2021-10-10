@@ -23,32 +23,10 @@ final class PheatureFlagsExtension extends ConfigurableExtension
      */
     protected function loadInternal(array $mergedConfig, ContainerBuilder $container): void
     {
-        $driver = $mergedConfig['driver'];
-
         $container->register(ToggleConfig::class, ToggleConfig::class)
             ->setAutowired(false)
             ->setLazy(true)
             ->addArgument($mergedConfig);
-
-        $finder = $container->register(FeatureFinder::class, FeatureFinder::class)
-            ->setAutowired(false)
-            ->setLazy(true)
-            ->setFactory([FeatureFinderFactory::class, 'create'])
-            ->addArgument(new Reference(ToggleConfig::class))
-            ->addArgument(new Reference(ChainToggleStrategyFactory::class));
-
-        if ('dbal' === $driver) {
-            $finder->addArgument(new Reference(Connection::class));
-        } else {
-            $finder->addArgument(null);
-        }
-
-        if ('inmemory' === $driver) {
-            $container->register(InMemoryFeatureFactory::class, InMemoryFeatureFactory::class)
-                ->setAutowired(false)
-                ->setLazy(true)
-                ->addArgument(new Reference(ChainToggleStrategyFactory::class));
-        }
 
         $container->register(Toggle::class, Toggle::class)
             ->setAutowired(false)
