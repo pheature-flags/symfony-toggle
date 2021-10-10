@@ -1,6 +1,19 @@
 # Changelog
 
-## [v0.2.0](https://github.com/pheature-flags/symfony-toggle/tree/0.2.0)
+## [0.2.1](https://github.com/pheature-flags/symfony-toggle/tree/0.2.1)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.2.0...0.2.1)
+
+**Fixed bugs:**
+
+- \[BUG\] oo few arguments to function Pheature\Crud\Psr11\Toggle\FeatureFinderFactory::create\(\), 2 passed in /getFeatureFinderService.php on line 23 and exactly 3 expected [\#9](https://github.com/pheature-flags/symfony-toggle/issues/9)
+- \[\#9\] set feature finder factory third parameter always [\#10](https://github.com/pheature-flags/symfony-toggle/pull/10) (@kpicaza)
+
+**Closed issues:**
+
+- Bump pheature-flags to ^0.2 [\#7](https://github.com/pheature-flags/symfony-toggle/issues/7)
+
+## [0.2.0](https://github.com/pheature-flags/symfony-toggle/tree/0.2.0) (2021-10-10)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/v0.1.2...0.2.0)
 
