@@ -1,5 +1,19 @@
 # Changelog
 
+## [v0.2.0](https://github.com/pheature-flags/symfony-toggle/tree/0.2.0)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/v0.1.2...0.2.0)
+
+**Implemented enhancements:**
+
+- \[symfony-toggle\] Allow `driver\_options` option in the Symfony bundle configuration [\#5](https://github.com/pheature-flags/symfony-toggle/issues/5)
+- \[symfony-toggle\] Allow `chain` driver option to the Symfony bundle configuration [\#4](https://github.com/pheature-flags/symfony-toggle/issues/4)
+- \[\#4\] add chain driver options to configuration [\#6](https://github.com/pheature-flags/symfony-toggle/pull/6) (@kpicaza)
+
+**Merged pull requests:**
+
+- \[\#7\] update pheature flags deps to ^0.2 [\#8](https://github.com/pheature-flags/symfony-toggle/pull/8) (@kpicaza)
+
 ## [v0.1.2](https://github.com/pheature-flags/pheature-flags/tree/v0.1.2)
 
 [Full Changelog](https://github.com/pheature-flags/pheature-flags/compare/v0.1.1...v0.1.2)
