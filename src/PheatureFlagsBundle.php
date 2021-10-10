@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace Pheature\Community\Symfony;
 
+use Pheature\Community\Symfony\DependencyInjection\FeatureFinderFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\FeatureRepositoryFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\SegmentFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\ToggleStrategyFactoryPass;
@@ -53,6 +54,7 @@ final class PheatureFlagsBundle extends Bundle
         $container->addCompilerPass(new SegmentFactoryPass());
         $container->addCompilerPass(new ToggleStrategyFactoryPass());
         $container->addCompilerPass(new FeatureRepositoryFactoryPass());
+        $container->addCompilerPass(new FeatureFinderFactoryPass());
         $container->addCompilerPass(new ToggleAPIPass());
     }
 }

@@ -26,7 +26,10 @@ final class FeatureRepositoryFactoryPass implements CompilerPassInterface
             ->setFactory([FeatureRepositoryFactory::class, 'create'])
             ->addArgument(new Reference(ToggleConfig::class));
 
-        if ('dbal' === $mergedConfig['driver']) {
+        if (
+            ToggleConfig::DRIVER_DBAL === $mergedConfig['driver']
+            || true === in_array(ToggleConfig::DRIVER_DBAL, $mergedConfig['driver_options'], true)
+        ) {
             $repository->addArgument(new Reference(Connection::class));
         } else {
             $repository->addArgument(null);

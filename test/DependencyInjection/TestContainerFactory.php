@@ -36,6 +36,9 @@ final class TestContainerFactory
         if ('dbal' === $driver) {
             $yamlFileLoader->load(realpath(__DIR__ . '/../../config/dbal_config.yaml'));
         }
+        if ('chain' === $driver) {
+            $yamlFileLoader->load(realpath(__DIR__ . '/../../config/chain_config.yaml'));
+        }
         $compilerPass->process($containerBuilder);
 
         return $containerBuilder;
