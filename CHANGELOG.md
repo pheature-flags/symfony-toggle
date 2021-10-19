@@ -1,6 +1,15 @@
 # Changelog
 
-## [0.2.1](https://github.com/pheature-flags/symfony-toggle/tree/0.2.1)
+## [0.2.2](https://github.com/pheature-flags/symfony-toggle/tree/0.2.2)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.2.1...0.2.2)
+
+**Implemented enhancements:**
+
+- Register chain services in the Symfony container [\#11](https://github.com/pheature-flags/symfony-toggle/issues/11)
+- \[\#11\] register chain services in container [\#12](https://github.com/pheature-flags/symfony-toggle/pull/12) (@kpicaza)
+
+## [0.2.1](https://github.com/pheature-flags/symfony-toggle/tree/0.2.1) (2021-10-10)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.2.0...0.2.1)
 
