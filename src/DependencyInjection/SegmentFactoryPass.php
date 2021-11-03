@@ -9,6 +9,7 @@ use Pheature\Core\Toggle\Read\SegmentFactory;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
+use Webmozart\Assert\Assert;
 
 final class SegmentFactoryPass implements CompilerPassInterface
 {
@@ -23,7 +24,14 @@ final class SegmentFactoryPass implements CompilerPassInterface
             ->setLazy(true)
             ->setClass(ChainSegmentFactory::class);
 
+        Assert::keyExists($mergedConfig, 'segment_types');
+        Assert::isArray($mergedConfig['segment_types']);
+
         foreach ($mergedConfig['segment_types'] as $segmentDefinition) {
+            Assert::keyExists($segmentDefinition, 'type');
+            Assert::string($segmentDefinition['type']);
+            Assert::keyExists($segmentDefinition, 'factory_id');
+            Assert::string($segmentDefinition['factory_id']);
             $container->register($segmentDefinition['type'], $segmentDefinition['factory_id'])
                 ->setAutowired(false)
                 ->setLazy(true);
