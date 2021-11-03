@@ -11,6 +11,7 @@ use Pheature\Crud\Psr11\Toggle\ToggleConfig;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Reference;
+use Webmozart\Assert\Assert;
 
 final class FeatureRepositoryFactoryPass implements CompilerPassInterface
 {
@@ -25,6 +26,11 @@ final class FeatureRepositoryFactoryPass implements CompilerPassInterface
             ->setLazy(true)
             ->setFactory([FeatureRepositoryFactory::class, 'create'])
             ->addArgument(new Reference(ToggleConfig::class));
+
+        Assert::keyExists($mergedConfig, 'driver');
+        Assert::string($mergedConfig['driver']);
+        Assert::keyExists($mergedConfig, 'driver_options');
+        Assert::isArray($mergedConfig['driver_options']);
 
         if (
             ToggleConfig::DRIVER_DBAL === $mergedConfig['driver']

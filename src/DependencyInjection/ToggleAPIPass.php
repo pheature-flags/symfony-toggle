@@ -8,6 +8,7 @@ use Symfony\Component\Config\FileLocator;
 use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\DependencyInjection\Loader\YamlFileLoader;
+use Webmozart\Assert\Assert;
 
 final class ToggleAPIPass implements CompilerPassInterface
 {
@@ -17,11 +18,15 @@ final class ToggleAPIPass implements CompilerPassInterface
         $pheatureFlagsConfig = $container->getExtensionConfig('pheature_flags');
 
         $mergedConfig = array_merge(...$pheatureFlagsConfig);
+        Assert::keyExists($mergedConfig, 'api_enabled');
+        Assert::boolean($mergedConfig['api_enabled']);
 
         if (false === $mergedConfig['api_enabled']) {
             return;
         }
 
+        Assert::keyExists($mergedConfig, 'api_prefix');
+        Assert::string($mergedConfig['api_prefix']);
         $container->getParameterBag()->set('pheature_flags_prefix', $mergedConfig['api_prefix']);
 
         $loader = new YamlFileLoader(
