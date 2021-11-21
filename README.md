@@ -12,7 +12,7 @@ Pheature Flags Symfony Toggle management Bundle, take a look to our [main packag
 
 ## Installation
 
-Install using composer
+Install it using [composer package manager](https://getcomposer.org/download/).
 
 ```php
 composer require pheature/symfony-toggle
