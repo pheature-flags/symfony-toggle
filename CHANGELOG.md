@@ -1,6 +1,25 @@
 # Changelog
 
-## [0.2.2](https://github.com/pheature-flags/symfony-toggle/tree/0.2.2)
+## [0.3.0](https://github.com/pheature-flags/symfony-toggle/tree/0.3.0) (2021-11-21)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.2.2...0.3.0)
+
+**Implemented enhancements:**
+
+- \[symfony-toggle\] Update PhpStan to version 1 and level 9 [\#15](https://github.com/pheature-flags/symfony-toggle/issues/15)
+-  \[symfony-toggle\] Add PHP 8.1 support [\#13](https://github.com/pheature-flags/symfony-toggle/issues/13)
+- \[\#13\] Add support for PHP 8.1 [\#19](https://github.com/pheature-flags/symfony-toggle/pull/19) (@kpicaza)
+- \[\#15\] Update PhpStan to version 1 and level 9 [\#16](https://github.com/pheature-flags/symfony-toggle/pull/16) (@kpicaza)
+
+**Closed issues:**
+
+- \[symfony-toggle\] update CI matrix PHP versions [\#17](https://github.com/pheature-flags/symfony-toggle/issues/17)
+
+**Merged pull requests:**
+
+- \[\#17\] Run CI both PHP 7.4 and 8.0 [\#18](https://github.com/pheature-flags/symfony-toggle/pull/18) (@kpicaza)
+
+## [0.2.2](https://github.com/pheature-flags/symfony-toggle/tree/0.2.2) (2021-10-19)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.2.1...0.2.2)
 
