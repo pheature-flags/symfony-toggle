@@ -30,7 +30,7 @@ final class PheatureFlagsExtension extends ConfigurableExtension
 
         $container->register(Toggle::class, Toggle::class)
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->addArgument(
                 new Reference(FeatureFinder::class)
             )

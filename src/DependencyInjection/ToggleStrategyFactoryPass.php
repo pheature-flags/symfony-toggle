@@ -38,7 +38,7 @@ final class ToggleStrategyFactoryPass implements CompilerPassInterface
             Assert::string($strategyDefinition['factory_id']);
             $container->register($strategyDefinition['type'], $strategyDefinition['factory_id'])
                 ->setAutowired(false)
-                ->setLazy(true);
+                ->setLazy(false);
 
             $toggleStrategyFactory->addArgument(new Reference($strategyDefinition['type']));
         }
