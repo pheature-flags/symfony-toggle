@@ -27,10 +27,10 @@ final class ToggleStrategyFactoryPassTest extends TestCase
 
         $strategy1 = $container->getDefinition(EnableByMatchingIdentityId::NAME);
         self::assertFalse($strategy1->isAutowired());
-        self::assertTrue($strategy1->isLazy());
+        self::assertFalse($strategy1->isLazy());
         $strategy2 = $container->getDefinition(EnableByMatchingSegment::NAME);
         self::assertFalse($strategy2->isAutowired());
-        self::assertTrue($strategy2->isLazy());
+        self::assertFalse($strategy2->isLazy());
 
         $toggleStrategyFactory = $container->get(ChainToggleStrategyFactory::class);
         self::assertInstanceOf(ChainToggleStrategyFactory::class, $toggleStrategyFactory);
