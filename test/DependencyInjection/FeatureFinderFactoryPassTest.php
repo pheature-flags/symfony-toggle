@@ -36,7 +36,7 @@ final class FeatureFinderFactoryPassTest extends TestCase
 
         $featureFinderFactoryDefinition = $container->getDefinition(FeatureFinder::class);
         self::assertFalse($featureFinderFactoryDefinition->isAutowired());
-        self::assertTrue($featureFinderFactoryDefinition->isLazy());
+        self::assertFalse($featureFinderFactoryDefinition->isLazy());
 
         $featureFinderFactory = $container->get(FeatureFinder::class);
         self::assertInstanceOf(FeatureFinder::class, $featureFinderFactory);
@@ -65,7 +65,7 @@ final class FeatureFinderFactoryPassTest extends TestCase
 
         $featureFinderFactoryDefinition = $container->getDefinition(FeatureFinder::class);
         self::assertFalse($featureFinderFactoryDefinition->isAutowired());
-        self::assertTrue($featureFinderFactoryDefinition->isLazy());
+        self::assertFalse($featureFinderFactoryDefinition->isLazy());
 
         $featureFinderFactory = $container->get(FeatureFinder::class);
         self::assertInstanceOf(FeatureFinder::class, $featureFinderFactory);

@@ -23,7 +23,7 @@ final class FeatureRepositoryFactoryPass implements CompilerPassInterface
 
         $repository = $container->register(FeatureRepository::class, FeatureRepository::class)
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->setFactory([FeatureRepositoryFactory::class, 'create'])
             ->addArgument(new Reference(ToggleConfig::class));
 
