@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.3.1](https://github.com/pheature-flags/symfony-toggle/tree/0.3.1)
+## [0.3.2](https://github.com/pheature-flags/symfony-toggle/tree/0.3.2)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.3.1...0.3.2)
+
+**Merged pull requests:**
+
+- ensure all defined services aren`t lazy [\#24](https://github.com/pheature-flags/symfony-toggle/pull/24) (@kpicaza)
+
+## [0.3.1](https://github.com/pheature-flags/symfony-toggle/tree/0.3.1) (2022-02-10)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.3.0...0.3.1)
 
