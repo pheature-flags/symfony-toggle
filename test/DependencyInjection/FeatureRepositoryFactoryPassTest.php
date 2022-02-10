@@ -25,7 +25,7 @@ final class FeatureRepositoryFactoryPassTest extends TestCase
 
         $featureRepositoryFactoryDefinition = $container->getDefinition(FeatureRepository::class);
         self::assertFalse($featureRepositoryFactoryDefinition->isAutowired());
-        self::assertTrue($featureRepositoryFactoryDefinition->isLazy());
+        self::assertFalse($featureRepositoryFactoryDefinition->isLazy());
 
         $featureRepositoryFactory = $container->get(FeatureRepository::class);
         self::assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);
@@ -48,7 +48,7 @@ final class FeatureRepositoryFactoryPassTest extends TestCase
 
         $featureRepositoryFactoryDefinition = $container->getDefinition(FeatureRepository::class);
         self::assertFalse($featureRepositoryFactoryDefinition->isAutowired());
-        self::assertTrue($featureRepositoryFactoryDefinition->isLazy());
+        self::assertFalse($featureRepositoryFactoryDefinition->isLazy());
 
         $featureRepositoryFactory = $container->get(FeatureRepository::class);
         self::assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);

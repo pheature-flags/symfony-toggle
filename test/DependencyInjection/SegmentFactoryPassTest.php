@@ -20,7 +20,7 @@ final class SegmentFactoryPassTest extends TestCase
 
         $segmentFactoryDefinition = $container->getDefinition(SegmentFactory::class);
         self::assertFalse($segmentFactoryDefinition->isAutowired());
-        self::assertTrue($segmentFactoryDefinition->isLazy());
+        self::assertFalse($segmentFactoryDefinition->isLazy());
         self::assertCount(2, $segmentFactoryDefinition->getArguments());
 
         $segment1 = $container->getDefinition(IdentitySegment::NAME);

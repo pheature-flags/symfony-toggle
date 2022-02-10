@@ -27,7 +27,7 @@ final class FeatureFinderFactoryPass implements CompilerPassInterface
 
         $finder = $container->register(FeatureFinder::class, FeatureFinder::class)
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->setFactory([FeatureFinderFactory::class, 'create'])
             ->addArgument(new Reference(ToggleConfig::class))
             ->addArgument(new Reference(ChainToggleStrategyFactory::class));

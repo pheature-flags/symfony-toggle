@@ -24,7 +24,7 @@ final class ToggleStrategyFactoryPass implements CompilerPassInterface
             ChainToggleStrategyFactory::class
         )
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->addArgument(new Reference(SegmentFactory::class));
 
         Assert::keyExists($mergedConfig, 'strategy_types');

@@ -25,7 +25,7 @@ final class PheatureFlagsExtension extends ConfigurableExtension
     {
         $container->register(ToggleConfig::class, ToggleConfig::class)
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->addArgument($mergedConfig);
 
         $container->register(Toggle::class, Toggle::class)

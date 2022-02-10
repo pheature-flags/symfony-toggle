@@ -21,7 +21,7 @@ final class SegmentFactoryPass implements CompilerPassInterface
 
         $segmentFactory = $container->register(SegmentFactory::class, SegmentFactory::class)
             ->setAutowired(false)
-            ->setLazy(true)
+            ->setLazy(false)
             ->setClass(ChainSegmentFactory::class);
 
         Assert::keyExists($mergedConfig, 'segment_types');
