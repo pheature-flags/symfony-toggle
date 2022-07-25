@@ -84,6 +84,12 @@
         "pheature/toggle-crud-psr7-api": "Allows using toggle management CRUD HTTP API."
     },
     "config": {
-        "sort-packages": true
+        "sort-packages": true,
+        "allow-plugins": {
+            "infection/extension-installer": true,
+            "icanhazstring/composer-unused": true,
+            "phpro/grumphp": true,
+            "phpstan/extension-installer": true
+        }
     }
 }
