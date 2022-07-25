@@ -1,6 +1,15 @@
 # Changelog
 
-## [0.3.2](https://github.com/pheature-flags/symfony-toggle/tree/0.3.2)
+## [0.4.0](https://github.com/pheature-flags/symfony-toggle/tree/0.4.0)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.3.2...0.4.0)
+
+**Merged pull requests:**
+
+- allow executing some composer plugins in dev mode [\#26](https://github.com/pheature-flags/symfony-toggle/pull/26) (@kpicaza)
+- update symfony to support both 5 and 6 versions [\#25](https://github.com/pheature-flags/symfony-toggle/pull/25) (@kpicaza)
+
+## [0.3.2](https://github.com/pheature-flags/symfony-toggle/tree/0.3.2) (2022-02-10)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.3.1...0.3.2)
 
