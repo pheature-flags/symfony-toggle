@@ -27,7 +27,7 @@
         "icanhazstring/composer-unused": "^0.7.5",
         "infection/infection": "^0.25",
         "pheature/dbal-toggle": "^0.3",
-        "pheature/inmemory-toggle": "^0.3",
+        "pheature/inmemory-toggle": "^0.3 || ^0.4",
         "pheature/toggle-crud": "^0.3",
         "pheature/toggle-crud-psr7-api": "^0.3",
         "phpcompatibility/php-compatibility": "^9.3",
