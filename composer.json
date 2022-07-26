@@ -29,7 +29,7 @@
         "pheature/dbal-toggle": "^0.3",
         "pheature/inmemory-toggle": "^0.3",
         "pheature/toggle-crud": "^0.3",
-        "pheature/toggle-crud-psr7-api": "^0.3",
+        "pheature/toggle-crud-psr7-api": "^0.3 || ^0.4",
         "phpcompatibility/php-compatibility": "^9.3",
         "phpro/grumphp": "^1.0",
         "phpstan/extension-installer": "^1.1",
