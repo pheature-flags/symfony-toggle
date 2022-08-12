@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.4.0](https://github.com/pheature-flags/symfony-toggle/tree/0.4.0)
+## [0.5.0](https://github.com/pheature-flags/symfony-toggle/tree/0.5.0)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.4.0...0.5.0)
+
+**Merged pull requests:**
+
+- bump interdependencies to ^0.5 [\#30](https://github.com/pheature-flags/symfony-toggle/pull/30) (@kpicaza)
+
+## [0.4.0](https://github.com/pheature-flags/symfony-toggle/tree/0.4.0) (2022-07-25)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.3.2...0.4.0)
 
@@ -77,7 +85,7 @@
 
 **Implemented enhancements:**
 
-- \[symfony-toggle\] Allow `driver\_options` option in the Symfony bundle configuration [\#5](https://github.com/pheature-flags/symfony-toggle/issues/5)
+- \[symfony-toggle\] Allow `driver_options` option in the Symfony bundle configuration [\#5](https://github.com/pheature-flags/symfony-toggle/issues/5)
 - \[symfony-toggle\] Allow `chain` driver option to the Symfony bundle configuration [\#4](https://github.com/pheature-flags/symfony-toggle/issues/4)
 - \[\#4\] add chain driver options to configuration [\#6](https://github.com/pheature-flags/symfony-toggle/pull/6) (@kpicaza)
 
