@@ -24,7 +24,7 @@
     },
     "require-dev": {
         "doctrine/dbal": ">=2.6 || ^3.0.0",
-        "icanhazstring/composer-unused": "^0.7.5",
+        "icanhazstring/composer-unused": "^0.7.5 || ^0.8.0",
         "infection/infection": "^0.25",
         "pheature/dbal-toggle": "^0.5",
         "pheature/inmemory-toggle": "^0.5",
