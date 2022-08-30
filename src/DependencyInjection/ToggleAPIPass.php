@@ -12,6 +12,7 @@ use Webmozart\Assert\Assert;
 
 final class ToggleAPIPass implements CompilerPassInterface
 {
+    /** @psalm-suppress ReservedWord */
     public function process(ContainerBuilder $container): void
     {
         /** @var array<array<mixed>> $pheatureFlagsConfig */

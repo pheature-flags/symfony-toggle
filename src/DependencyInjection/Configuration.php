@@ -11,6 +11,7 @@ use Symfony\Component\Config\Definition\ConfigurationInterface;
 final class Configuration implements ConfigurationInterface
 {
     /**
+     * @psalm-suppress ReservedWord
      * @return TreeBuilder
      */
     public function getConfigTreeBuilder(): TreeBuilder
@@ -41,6 +42,7 @@ final class Configuration implements ConfigurationInterface
         return $treeBuilder;
     }
 
+    /** @psalm-suppress ReservedWord */
     private function addStrategyTypes(ArrayNodeDefinition $rootNode): void
     {
         /** @phpstan-ignore-next-line */
@@ -56,6 +58,7 @@ final class Configuration implements ConfigurationInterface
                 ->end();
     }
 
+    /** @psalm-suppress ReservedWord */
     private function addSegmentTypes(ArrayNodeDefinition $rootNode): void
     {
         /** @phpstan-ignore-next-line */
@@ -71,6 +74,7 @@ final class Configuration implements ConfigurationInterface
                 ->end();
     }
 
+    /** @psalm-suppress ReservedWord */
     private function addToggles(ArrayNodeDefinition $rootNode): void
     {
         /** @phpstan-ignore-next-line */
