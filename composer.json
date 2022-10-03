@@ -39,6 +39,7 @@
         "roave/infection-static-analysis-plugin": "^1.18",
         "squizlabs/php_codesniffer": "^3.4",
         "symfony/var-dumper": "^4.2 || ^5.0 || ^6.0",
+        "twig/twig": "^2.4.4 || ^3.0",
         "vimeo/psalm": "^4.4"
     },
     "autoload": {
@@ -81,7 +82,11 @@
         "pheature/dbal-toggle": "Allows using Dbal toggle management implementation.",
         "pheature/inmemory-toggle": "Allows using Inmemory toggle management implementation.",
         "pheature/toggle-crud": "Allows using toggle management CRUD implementation.",
-        "pheature/toggle-crud-psr7-api": "Allows using toggle management CRUD HTTP API."
+        "pheature/toggle-crud-psr7-api": "Allows using toggle management CRUD HTTP API.",
+        "twig/twig-bundle": "Allows using the twig extension."
+    },
+    "conflict": {
+        "twig/twig": "<2.4.4"
     },
     "config": {
         "sort-packages": true,

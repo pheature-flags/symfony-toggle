@@ -10,6 +10,7 @@ use Pheature\Community\Symfony\DependencyInjection\PheatureFlagsExtension;
 use Pheature\Community\Symfony\DependencyInjection\SegmentFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\ToggleStrategyFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\ToggleAPIPass;
+use Pheature\Community\Symfony\DependencyInjection\TwigExtensionPass;
 use Pheature\Model\Toggle\EnableByMatchingIdentityId;
 use Pheature\Model\Toggle\EnableByMatchingSegment;
 use Pheature\Model\Toggle\IdentitySegment;
@@ -63,5 +64,6 @@ final class PheatureFlagsBundle extends Bundle
         $container->addCompilerPass(new FeatureRepositoryFactoryPass());
         $container->addCompilerPass(new FeatureFinderFactoryPass());
         $container->addCompilerPass(new ToggleAPIPass());
+        $container->addCompilerPass(new TwigExtensionPass());
     }
 }
