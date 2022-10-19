@@ -6,12 +6,14 @@ namespace Pheature\Community\Symfony;
 
 use Pheature\Community\Symfony\DependencyInjection\FeatureFinderFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\FeatureRepositoryFactoryPass;
+use Pheature\Community\Symfony\DependencyInjection\PheatureFlagsExtension;
 use Pheature\Community\Symfony\DependencyInjection\SegmentFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\ToggleStrategyFactoryPass;
 use Pheature\Community\Symfony\DependencyInjection\ToggleAPIPass;
 use Pheature\Model\Toggle\EnableByMatchingIdentityId;
 use Pheature\Model\Toggle\EnableByMatchingSegment;
 use Pheature\Model\Toggle\IdentitySegment;
+use Pheature\Model\Toggle\InCollectionMatchingSegment;
 use Pheature\Model\Toggle\SegmentFactory;
 use Pheature\Model\Toggle\StrategyFactory;
 use Pheature\Model\Toggle\StrictMatchingSegment;
@@ -33,7 +35,11 @@ final class PheatureFlagsBundle extends Bundle
             [
                 'type' => StrictMatchingSegment::NAME,
                 'factory_id' => SegmentFactory::class
-            ]
+            ],
+            [
+                'type' => InCollectionMatchingSegment::NAME,
+                'factory_id' => SegmentFactory::class
+            ],
         ],
         'strategy_types' => [
             [
