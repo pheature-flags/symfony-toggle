@@ -1,6 +1,26 @@
 # Changelog
 
-## [0.5.0](https://github.com/pheature-flags/symfony-toggle/tree/0.5.0)
+## [0.6.0](https://github.com/pheature-flags/symfony-toggle/tree/0.6.0)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.5.0...0.6.0)
+
+**Implemented enhancements:**
+
+- Chore: PHPUnit non-static assertions [\#38](https://github.com/pheature-flags/symfony-toggle/pull/38) (@DonCallisto)
+- Add twig extension [\#36](https://github.com/pheature-flags/symfony-toggle/pull/36) (@ajgarlag)
+- \[\#190\]: add in\_collection\_matching\_segment to default config [\#35](https://github.com/pheature-flags/symfony-toggle/pull/35) (@kpicaza)
+
+**Fixed bugs:**
+
+- Add missing config key [\#34](https://github.com/pheature-flags/symfony-toggle/pull/34) (@ajgarlag)
+- Add missing `webmozart/assert` requirement [\#33](https://github.com/pheature-flags/symfony-toggle/pull/33) (@ajgarlag)
+
+**Merged pull requests:**
+
+- Added checks for configuration [\#37](https://github.com/pheature-flags/symfony-toggle/pull/37) (@DonCallisto)
+- update dev dependencies [\#31](https://github.com/pheature-flags/symfony-toggle/pull/31) (@kpicaza)
+
+## [0.5.0](https://github.com/pheature-flags/symfony-toggle/tree/0.5.0) (2022-08-12)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.4.0...0.5.0)
 
