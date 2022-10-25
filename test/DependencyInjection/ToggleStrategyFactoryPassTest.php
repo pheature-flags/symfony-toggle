@@ -21,18 +21,18 @@ final class ToggleStrategyFactoryPassTest extends TestCase
         $container->register(SegmentFactory::class, ChainSegmentFactory::class);
 
         $toggleStrategyFactoryDefinition = $container->getDefinition(ChainToggleStrategyFactory::class);
-        self::assertFalse($toggleStrategyFactoryDefinition->isAutowired());
-        self::assertFalse($toggleStrategyFactoryDefinition->isLazy());
-        self::assertCount(3, $toggleStrategyFactoryDefinition->getArguments());
+        $this->assertFalse($toggleStrategyFactoryDefinition->isAutowired());
+        $this->assertFalse($toggleStrategyFactoryDefinition->isLazy());
+        $this->assertCount(3, $toggleStrategyFactoryDefinition->getArguments());
 
         $strategy1 = $container->getDefinition(EnableByMatchingIdentityId::NAME);
-        self::assertFalse($strategy1->isAutowired());
-        self::assertFalse($strategy1->isLazy());
+        $this->assertFalse($strategy1->isAutowired());
+        $this->assertFalse($strategy1->isLazy());
         $strategy2 = $container->getDefinition(EnableByMatchingSegment::NAME);
-        self::assertFalse($strategy2->isAutowired());
-        self::assertFalse($strategy2->isLazy());
+        $this->assertFalse($strategy2->isAutowired());
+        $this->assertFalse($strategy2->isLazy());
 
         $toggleStrategyFactory = $container->get(ChainToggleStrategyFactory::class);
-        self::assertInstanceOf(ChainToggleStrategyFactory::class, $toggleStrategyFactory);
+        $this->assertInstanceOf(ChainToggleStrategyFactory::class, $toggleStrategyFactory);
     }
 }
