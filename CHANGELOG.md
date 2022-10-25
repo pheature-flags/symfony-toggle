@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.6.0](https://github.com/pheature-flags/symfony-toggle/tree/0.6.0)
+## [0.6.1](https://github.com/pheature-flags/symfony-toggle/tree/0.6.1)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.0...0.6.1)
+
+**Fixed bugs:**
+
+- fix: load twig extension dependencies dinamically [\#39](https://github.com/pheature-flags/symfony-toggle/pull/39) (@kpicaza)
+
+## [0.6.0](https://github.com/pheature-flags/symfony-toggle/tree/0.6.0) (2022-10-25)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.5.0...0.6.0)
 
