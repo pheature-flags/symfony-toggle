@@ -35,11 +35,11 @@ final class FeatureFinderFactoryPassTest extends TestCase
             ->addArgument(['url' => 'sqlite:///test.sqlite']);
 
         $featureFinderFactoryDefinition = $container->getDefinition(FeatureFinder::class);
-        self::assertFalse($featureFinderFactoryDefinition->isAutowired());
-        self::assertFalse($featureFinderFactoryDefinition->isLazy());
+        $this->assertFalse($featureFinderFactoryDefinition->isAutowired());
+        $this->assertFalse($featureFinderFactoryDefinition->isLazy());
 
         $featureFinderFactory = $container->get(FeatureFinder::class);
-        self::assertInstanceOf(FeatureFinder::class, $featureFinderFactory);
+        $this->assertInstanceOf(FeatureFinder::class, $featureFinderFactory);
         unlink('test.sqlite');
     }
 
@@ -64,10 +64,10 @@ final class FeatureFinderFactoryPassTest extends TestCase
         ]);
 
         $featureFinderFactoryDefinition = $container->getDefinition(FeatureFinder::class);
-        self::assertFalse($featureFinderFactoryDefinition->isAutowired());
-        self::assertFalse($featureFinderFactoryDefinition->isLazy());
+        $this->assertFalse($featureFinderFactoryDefinition->isAutowired());
+        $this->assertFalse($featureFinderFactoryDefinition->isLazy());
 
         $featureFinderFactory = $container->get(FeatureFinder::class);
-        self::assertInstanceOf(FeatureFinder::class, $featureFinderFactory);
+        $this->assertInstanceOf(FeatureFinder::class, $featureFinderFactory);
     }
 }

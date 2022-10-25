@@ -19,18 +19,18 @@ final class SegmentFactoryPassTest extends TestCase
         $container = TestContainerFactory::create($compilerPass);
 
         $segmentFactoryDefinition = $container->getDefinition(SegmentFactory::class);
-        self::assertFalse($segmentFactoryDefinition->isAutowired());
-        self::assertFalse($segmentFactoryDefinition->isLazy());
-        self::assertCount(2, $segmentFactoryDefinition->getArguments());
+        $this->assertFalse($segmentFactoryDefinition->isAutowired());
+        $this->assertFalse($segmentFactoryDefinition->isLazy());
+        $this->assertCount(2, $segmentFactoryDefinition->getArguments());
 
         $segment1 = $container->getDefinition(IdentitySegment::NAME);
-        self::assertFalse($segment1->isAutowired());
-        self::assertFalse($segment1->isLazy());
+        $this->assertFalse($segment1->isAutowired());
+        $this->assertFalse($segment1->isLazy());
         $segment2 = $container->getDefinition(StrictMatchingSegment::NAME);
-        self::assertFalse($segment2->isAutowired());
-        self::assertFalse($segment2->isLazy());
+        $this->assertFalse($segment2->isAutowired());
+        $this->assertFalse($segment2->isLazy());
 
         $segmentFactory = $container->get(SegmentFactory::class);
-        self::assertInstanceOf(ChainSegmentFactory::class, $segmentFactory);
+        $this->assertInstanceOf(ChainSegmentFactory::class, $segmentFactory);
     }
 }

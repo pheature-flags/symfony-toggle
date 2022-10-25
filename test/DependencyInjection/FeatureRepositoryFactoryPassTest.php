@@ -24,11 +24,11 @@ final class FeatureRepositoryFactoryPassTest extends TestCase
         ]);
 
         $featureRepositoryFactoryDefinition = $container->getDefinition(FeatureRepository::class);
-        self::assertFalse($featureRepositoryFactoryDefinition->isAutowired());
-        self::assertFalse($featureRepositoryFactoryDefinition->isLazy());
+        $this->assertFalse($featureRepositoryFactoryDefinition->isAutowired());
+        $this->assertFalse($featureRepositoryFactoryDefinition->isLazy());
 
         $featureRepositoryFactory = $container->get(FeatureRepository::class);
-        self::assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);
+        $this->assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);
     }
 
     public function testItShouldRegisterDbalFeatureRepositoryInContainer(): void
@@ -47,11 +47,11 @@ final class FeatureRepositoryFactoryPassTest extends TestCase
         $container->prependExtensionConfig('pheature_flags', ['driver' => 'dbal']);
 
         $featureRepositoryFactoryDefinition = $container->getDefinition(FeatureRepository::class);
-        self::assertFalse($featureRepositoryFactoryDefinition->isAutowired());
-        self::assertFalse($featureRepositoryFactoryDefinition->isLazy());
+        $this->assertFalse($featureRepositoryFactoryDefinition->isAutowired());
+        $this->assertFalse($featureRepositoryFactoryDefinition->isLazy());
 
         $featureRepositoryFactory = $container->get(FeatureRepository::class);
-        self::assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);
+        $this->assertInstanceOf(FeatureRepository::class, $featureRepositoryFactory);
         unlink('test.sqlite');
     }
 }

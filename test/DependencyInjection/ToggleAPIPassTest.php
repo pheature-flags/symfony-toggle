@@ -26,7 +26,7 @@ final class ToggleAPIPassTest extends TestCase
 
         $expectedLoadedResources = 0;
         $loadedResources = $container->getResources();
-        self::assertCount($expectedLoadedResources, $loadedResources);
+        $this->assertCount($expectedLoadedResources, $loadedResources);
     }
 
     public function testItShouldLoadApiServicesInContainer(): void
@@ -41,11 +41,11 @@ final class ToggleAPIPassTest extends TestCase
         $compilerPass = new ToggleAPIPass();
         $container = TestContainerFactory::create($compilerPass, null, $config);
 
-        self::assertSame($expectedPrefix, $container->getParameter('pheature_flags_prefix'));
+        $this->assertSame($expectedPrefix, $container->getParameter('pheature_flags_prefix'));
 
         $loadedResources = $container->getResources();
 
-        self::assertCount(2, $loadedResources);
+        $this->assertCount(2, $loadedResources);
 
         $this->assertSimilarResourceIn('src/Resources/config/toggle_api/services/controller_services.yaml',
             $loadedResources);
@@ -66,7 +66,7 @@ final class ToggleAPIPassTest extends TestCase
             array_map(static fn(FileResource $fileResource) => $fileResource->getResource(), $currentResources)
         );
 
-        self::fail(
+        $this->fail(
             sprintf(
                 'Similar resource "%s" not found in current resources: [%s]',
                 $similarResource,

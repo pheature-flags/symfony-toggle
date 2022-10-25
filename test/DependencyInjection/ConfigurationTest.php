@@ -19,7 +19,7 @@ final class ConfigurationTest extends TestCase
         $configuration = new Configuration();
         $actualConfiguration = $processor->processConfiguration($configuration, $actualConfig);
 
-        self::assertEquals($expectedConfig, $actualConfiguration);
+        $this->assertEquals($expectedConfig, $actualConfiguration);
     }
 
     /** @dataProvider invalidConfigurations */
