@@ -287,5 +287,105 @@ final class ConfigurationTest extends TestCase
                 ],
             ]
         ];
+
+        yield 'user defines a strategy_type without a type' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'strategy_types' => [
+                        [
+                            'factory_id' => 'a_factory_id',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a strategy_type with empty type' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'strategy_types' => [
+                        [
+                            'type' => '',
+                            'factory_id' => 'a_factory_id',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a strategy_type without factory id' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'strategy_types' => [
+                        [
+                            'type' => 'my_strategy_type',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a strategy_type with empty factory id' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'strategy_types' => [
+                        [
+                            'type' => 'my_strategy_type',
+                            'factory_id' => '',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a segment_type without a type' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'segment_types' => [
+                        [
+                            'factory_id' => 'a_factory_id',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a segment_type with empty type' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'segment_types' => [
+                        [
+                            'type' => '',
+                            'factory_id' => 'a_factory_id',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a segment_type without factory id' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'segment_types' => [
+                        [
+                            'type' => 'my_strategy_type',
+                        ]
+                    ],
+                ],
+            ]
+        ];
+
+        yield 'user defines a segment_type with empty factory id' => [
+            'user config' => [
+                'pheature_flags' => [
+                    'segment_types' => [
+                        [
+                            'type' => 'my_strategy_type',
+                            'factory_id' => '',
+                        ]
+                    ],
+                ],
+            ]
+        ];
     }
 }
