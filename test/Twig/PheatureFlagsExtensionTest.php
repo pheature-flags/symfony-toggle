@@ -21,13 +21,21 @@ final class PheatureFlagsExtensionTest extends TestCase
 {
     public function testItShouldExposeTwoTests(): void
     {
-        $extension = new PheatureFlagsExtension(new Toggle($this->createStub(FeatureFinder::class)));
+        $extension = new PheatureFlagsExtension(
+            new PheatureFlagsRuntime(
+                new Toggle($this->createStub(FeatureFinder::class))
+            )
+        );
         $this->assertCount(2, $extension->getTests());
     }
 
     public function testItShouldExposeOneFunction(): void
     {
-        $extension = new PheatureFlagsExtension(new Toggle($this->createStub(FeatureFinder::class)));
+        $extension = new PheatureFlagsExtension(
+            new PheatureFlagsRuntime(
+                new Toggle($this->createStub(FeatureFinder::class))
+            )
+        );
         $this->assertCount(1, $extension->getFunctions());
     }
 
@@ -38,9 +46,12 @@ final class PheatureFlagsExtensionTest extends TestCase
     {
         $loader = new ArrayLoader(['index' => $template]);
         $twig = new Environment($loader, ['debug' => true, 'cache' => false]);
-        $twig->addExtension(new PheatureFlagsExtension());
         $toggle = $this->createAllFeaturesEnabledToggle();
-        $twig->addRuntimeLoader(new FactoryRuntimeLoader([PheatureFlagsRuntime::class => fn() => new PheatureFlagsRuntime($toggle)]));
+        $twig->addExtension(new PheatureFlagsExtension(
+            new PheatureFlagsRuntime(
+                $toggle
+            )
+        ));
 
         $this->assertSame('yes', $twig->load('index')->render($variables));
     }
