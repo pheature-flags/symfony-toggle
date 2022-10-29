@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.6.1](https://github.com/pheature-flags/symfony-toggle/tree/0.6.1)
+## [0.6.2](https://github.com/pheature-flags/symfony-toggle/tree/0.6.2)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.1...0.6.2)
+
+**Implemented enhancements:**
+
+- allow user declare segment type factories [\#40](https://github.com/pheature-flags/symfony-toggle/pull/40) (@kpicaza)
+
+## [0.6.1](https://github.com/pheature-flags/symfony-toggle/tree/0.6.1) (2022-10-25)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.0...0.6.1)
 
