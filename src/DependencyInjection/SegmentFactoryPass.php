@@ -32,9 +32,11 @@ final class SegmentFactoryPass implements CompilerPassInterface
             Assert::string($segmentDefinition['type']);
             Assert::keyExists($segmentDefinition, 'factory_id');
             Assert::string($segmentDefinition['factory_id']);
-            $container->register($segmentDefinition['type'], $segmentDefinition['factory_id'])
-                ->setAutowired(false)
-                ->setLazy(false);
+            if (false === $container->has($segmentDefinition['type'])) {
+                $container->register($segmentDefinition['type'], $segmentDefinition['factory_id'])
+                    ->setAutowired(false)
+                    ->setLazy(false);
+            }
 
             $segmentFactory->addArgument(new Reference($segmentDefinition['type']));
         }
