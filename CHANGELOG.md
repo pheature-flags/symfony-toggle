@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.6.2](https://github.com/pheature-flags/symfony-toggle/tree/0.6.2)
+## [0.7.0](https://github.com/pheature-flags/symfony-toggle/tree/0.7.0)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.2...0.7.0)
+
+**Merged pull requests:**
+
+- \[\#359\] Add PHP 8.2 support [\#43](https://github.com/pheature-flags/symfony-toggle/pull/43) (@kpicaza)
+
+## [0.6.2](https://github.com/pheature-flags/symfony-toggle/tree/0.6.2) (2022-10-29)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.1...0.6.2)
 
