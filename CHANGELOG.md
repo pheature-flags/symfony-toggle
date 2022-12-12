@@ -1,6 +1,14 @@
 # Changelog
 
-## [0.7.0](https://github.com/pheature-flags/symfony-toggle/tree/0.7.0)
+## [0.7.1](https://github.com/pheature-flags/symfony-toggle/tree/0.7.1)
+
+[Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.7.0...0.7.1)
+
+**Fixed bugs:**
+
+- \[\#44\] update dependency constraints to ^0.7 [\#49](https://github.com/pheature-flags/symfony-toggle/pull/49) (@kpicaza)
+
+## [0.7.0](https://github.com/pheature-flags/symfony-toggle/tree/0.7.0) (2022-12-10)
 
 [Full Changelog](https://github.com/pheature-flags/symfony-toggle/compare/0.6.2...0.7.0)
 
