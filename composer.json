@@ -26,7 +26,7 @@
     "require-dev": {
         "doctrine/dbal": ">=2.6 || ^3.0",
         "icanhazstring/composer-unused": "^0.8",
-        "pheature/dbal-toggle": "^0.5",
+        "pheature/dbal-toggle": "^0.5 || ^0.7",
         "pheature/inmemory-toggle": "^0.5",
         "pheature/toggle-crud": "^0.5",
         "pheature/toggle-crud-psr7-api": "^0.5",
